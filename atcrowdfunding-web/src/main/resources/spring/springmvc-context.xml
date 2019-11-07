@@ -14,36 +14,7 @@
     <mvc:default-servlet-handler/>
     <!--  注解驱动，以使得访问路径与方法的匹配可以通过注解配置-->
     <mvc:annotation-driven />
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**" />
-            <mvc:exclude-mapping path="/login" />
-            <mvc:exclude-mapping path="/doAJAXLogin" />
-            <mvc:exclude-mapping path="/bootstrap/**" />
-            <mvc:exclude-mapping path="/css/**" />
-            <mvc:exclude-mapping path="/fonts/**" />
-            <mvc:exclude-mapping path="/img/**" />
-            <mvc:exclude-mapping path="/jquery/**" />
-            <mvc:exclude-mapping path="/layer/**" />
-            <mvc:exclude-mapping path="/script/**" />
-            <mvc:exclude-mapping path="/ztree/**" />
-            <bean class="com.atguigu.atcrowdfunding.web.LoginInterceptor"></bean>
-        </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/**" />
-            <mvc:exclude-mapping path="/login" />
-            <mvc:exclude-mapping path="/doAJAXLogin" />
-            <mvc:exclude-mapping path="/bootstrap/**" />
-            <mvc:exclude-mapping path="/css/**" />
-            <mvc:exclude-mapping path="/fonts/**" />
-            <mvc:exclude-mapping path="/img/**" />
-            <mvc:exclude-mapping path="/jquery/**" />
-            <mvc:exclude-mapping path="/layer/**" />
-            <mvc:exclude-mapping path="/script/**" />
-            <mvc:exclude-mapping path="/ztree/**" />
-            <bean class="com.atguigu.atcrowdfunding.web.AuthInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
+
     
     <!-- 视图解析器 当框架处理页面跳转时 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
