@@ -6,8 +6,15 @@ public class User {
 	private String username;
 	private String loginacct;
 	private String userpswd;
+	private String email;
 	
-  public String getLoginacct() {
+  public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+public String getLoginacct() {
 		return loginacct;
 	}
 	public void setLoginacct(String loginacct) {

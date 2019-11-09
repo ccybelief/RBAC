@@ -1,6 +1,7 @@
 package com.atguigu.atcrowdfunding.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.annotations.Select;
 
@@ -11,5 +12,9 @@ public interface UserDao {
 	 List<User> queryAll();
     @Select("select * from t_user where loginacct=#{loginacct} and userpswd=#{userpswd}")
 	User query4Login(User user);
+    
+	List<User> pageQueryData(Map<String, Object> map);
+	
+	int pageQueryCount(Map<String, Object> map);
 
 }
